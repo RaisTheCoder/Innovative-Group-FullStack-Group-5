@@ -1,0 +1,26 @@
+.home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.side {
+  background-color: rgba(126, 104, 95, 0.7);
+  height: 550px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.image {
+  height: 600px;
+  width: 1000px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+}

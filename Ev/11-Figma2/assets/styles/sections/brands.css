@@ -1,0 +1,18 @@
+#brands {
+  width: 100%;
+  padding: 40px;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.logos {
+  display: flex;
+  gap: 72px;
+}
+
+.logo {
+  cursor: pointer;
+}

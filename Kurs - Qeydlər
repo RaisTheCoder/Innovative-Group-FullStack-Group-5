@@ -1,0 +1,105 @@
+-- 27/11/2025 -- HTML Intro
+1. Səhifələr çoxu zaman <head> və <body> dən ibarətdir, <footer> istəyə bağlı olaraq.
+2. <h> (header) elementində 6 boy çeşidi mövcuddur
+3. html tag/elementləri içərisində yazılan tənzimləmələrə attribute deyilir
+4. paraqraf üçün <p> istifadə edilir
+5. Struktur - HTML, Görünüş - CSS, Arxa-fon - JavaScript
+
+-- 28/11/2025 -- Table
+1. Table məlumatları oxunabiləcək şəkildə qrafik formada saxlamaq üçün strukturdur.
+
+-- 01/12/2025 -- Listing, iFrame
+1. <ul> nöqtə ilə, <ol> isə rəqəm ilə sıralayır.
+2. <iframe> ilə saytımızda həm video, həm də kiçik veb səhifələr əlavə etmək mümkündür.
+3. Inline CSS, Internal və External-dan daha vacibdir.
+
+-- 02/12/2025 --
+1. #id və .class-ın ən böyük fərqi budur ki,
+#id həm sadəcə bir dəfə istifadə edilə bilir, həm də .class-dan daha vacibdir
+
+-- 03/12/2025 -- Flex
+1. Div = Block, Span = Inline
+2. Margin = Kənar boşluq, Padding = iç boşluq
+
+-- 04/12/2025 -- Selector
+1. Vaciblik Səviyyəsi/Selector:
+    !. !mportant (Ən Vacibi/Məcburi)
+    1. inline, 
+    2. #id, 
+    3. .class, 
+    4. tag  
+    5. * (asterisk/wildcard)
+2. CSS kodlarımızı sıra-sıra oxuyur, yəni ən altda eyni tag-ə fərqli rəng və
+fərqli class adı qoymusuzsa ən sondaki color kodunu götürəcəkdir
+3. HTML də tag-lərə ayrı classlar vermək üçün
+class attributunda bir class qoyduqdan sonra arasına space qoymaq kifayətdir.
+
+-- 8/12/2025 -- Semantic HTML
+1. <div> .class üçün semantik HTML5 əvəzləri
+    1. <main> = .container/<body> (body heç toxunmamaq şərtdir, problemlər yaradabilir.)
+    2. <section> = .content/.parent
+    3. <aside> = .side-bar
+    4. <footer> = .footer
+    5. <article> = .article
+2. <nav>-ın manual navbar-dan daha üstün olma səbəbi SEO ilə işləməsidir.
+------ Semantik/SEO HTML Tag-lar ------
+    <header> - Baş tərəf + <nav> - Naviqasiya
+    <main> - Əsas hissə
+    <em> - Yazını vurğulamaq.
+    <strong> - Yazının vacibliyini bildirmək.
+    <footer> - Alt hissə/Əlaqə və kömək informasiyasının yazıldığı yer.
+---------------------------------------
+
+-- 10/12/2025 -- Z-Index, hover, və adlandırma keysləri (naming cases)
+1. z-index HTML səhifəmizdə olan elementlərin qatmanını dəyişmək üçün istifadə edilir
+    naviqasiya barı, yazıları şəkil üstünə almaq və sairə kimi hadisələrdə çox işimizə yarayır.
+2. :hover pseudo-class istifadə etdiyimiz elementin üstünə kursoru götürdükdə
+    reaktiv olması üçün verdiyimiz fərqli dizayna dönüşərək istifadəçiyə feedback (cavab) verir.
+    interaktiv səhifələr yaratmaq üçün öyrəndiyimiz ən birinci pseudo-classlardan biridir.
+3. 4 Fərli adlandırma keyslərimiz vardır:
+    1. snake_case
+    2. camelCase
+    3. kebab-case
+    4. PascalCase
+4. "Display: none;" elementi tam aradan qaldırır,
+    "visiblity: hidden;" isə sadəcə vizual olaraq gizlədir, aldığı yeri hələ də tutmuş olur.
+5. "overflow" bilirik ki, "daşmaq" anlamına gəlir,
+    parent element-ə "overflow: hidden;" verərək
+    içindəki daşan kontentin artıqlarını gizləmək mümkündür.
+    Alternativ olaraq gizlətməyib scroll etmək üçün "overflow: scroll;" mövcuddur.
+
+-- 11/12/2025 -- Animation
+1. @keyframes from-to, yaxud x%-lərdən (faizlərdən) ibarətdir.
+    bunun sayəsində zamanlama ilə elementimizi fərqli görünüşlərə keçirəbilirik.
+
+-- 19/12/2025 -- Bootstrap Intro
+1. Bootstrap modular, ancaq sadə dizaynları olan bir CSS 'framework'dur
+
+-- 22/12/2025 --
+1. CSS də --variable dəyişənlərindəki dəyərlərimizi var(--içində)
+istifadə edərək asanlıqla o həmən verilən dəyərləri çağırmaq mümkündür
+2. Dəyişənləri saxlamaq üçün ümumiyyətlə @root istifadə edilir.
+3. CSS də olan "fr" unit termini Azəybaycan dilində "kəsr" adlanır,
+ekranın bərabəy kəsrinə görə boy almaq üçün əlverişlidir.
+4. ::before - Sol tərəf, ::after - Sağ tərəf.
+
+-- 25/12/2025 -- JS Intro
+1. Primitiv/Qədimi data-tipləri
+    String, Number, Boolean, Undefined
+2. Referans/Müasir data-tipləri
+    Array, Object, 
+---------------------------------------
+3. Dəyişən fərqləri
+    var - function-scoped
+    let - block-scoped, reassignable
+    const - block-scoped, non-reassignable
+
+-- 30/12/2025 -- Ternary Operator, Switch Cases and Loops
+1. Loop çeşidləri
+    For,
+    While,
+    Do
+---------------------------------------
+2. "Do" ilə "While"-ın ən böyük fərqi:
+    biri şərt uyğun olmasa belə kodu ən azı bir dəfə çalışdırır, 
+    digəri isə kodu sırf uyğun şərt qarşılandıqda çalışdır. (Əksini edir)

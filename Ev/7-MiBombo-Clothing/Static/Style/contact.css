@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+}
+
+.contacts {
+    margin: auto;
+    border: 2px dashed black;
+    border-radius: 12px;
+    height: 150px;
+    width: 350px;
+    text-align: center;
+}
+
+.fa-discord {
+    color: blue;
+}
+.fa-instagram {
+    color: rgb(216, 78, 186);
+}
+
+.contacts td {
+    color: rgb(204, 174, 76);
+    cursor: pointer;
+}

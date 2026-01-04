@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first-img {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F2489626.jpg&f=1&nofb=1&ipt=05bbc4d29307b187916eda2f53459e10ffc895f5e8f9b5357fca80337f575002");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-up {
+  display: flex;
+  border-radius: 10px 10px 0 0;
+  margin: 500px auto 0;
+  background-color: white;
+  width: 60%;
+  height: 200px;
+}
+
+.content {
+  border-radius: 10px;
+  margin: auto;
+  background-color: white;
+  width: 80%;
+  height: 620px;
+  margin-bottom: 500px;
+  padding: 50px;
+}
+
+.welcome {
+  margin: auto;
+}

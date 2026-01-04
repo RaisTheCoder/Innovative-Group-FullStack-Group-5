@@ -1,0 +1,42 @@
+.movie-hyper {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: auto;
+}
+
+.movie-container {
+  width: 77%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  margin: 15px;
+  background-color: rgb(73, 59, 59);
+  border: red solid 1px;
+  border-radius: 12px;
+  width: 273px;
+  padding: 25px;
+  height: 600px;
+}
+
+.movie-img {
+  overflow: hidden;
+  border-radius: 10px;
+  height: 64%;
+  width: 100%;
+}
+
+.movie-title {
+  font-size: 22px;
+}
+
+.movie-btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(158, 79, 79);
+}

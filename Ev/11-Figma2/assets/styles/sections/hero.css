@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  background-image: url("../../images/Ellipse28.png");
+  background-repeat: no-repeat;
+}
+
+#hero {
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+#hero-container {
+  display: flex;
+  justify-content: space-between;
+  width: 88%;
+  height: 100%;
+  padding: 88px 0px;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.pill {
+  width: fit-content;
+  border-radius: 24px;
+  padding: 12px 10px;
+  border: 1px solid #4d4d4d;
+  color: #9dff3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-pill {
+  padding: 12px 20px;
+}
+
+.ellipse {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: #9dff3a;
+}
+
+.ellipse28 {
+  position: relative;
+}
+
+.shape {
+  width: 75vh;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  padding: 14px 24px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.getstarted {
+  color: black;
+  border: none;
+  background-color: #9dff3a;
+}
+.getstarted:active {
+  background-color: rgb(134, 216, 52);
+}
+
+.watch {
+  background-color: transparent;
+  transition: 0.3s;
+}

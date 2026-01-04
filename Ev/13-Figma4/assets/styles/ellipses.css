@@ -1,0 +1,47 @@
+.ellipse {
+  position: absolute;
+  z-index: -3;
+}
+
+.ellipse1 {
+  top: 0;
+  right: 0;
+}
+
+.ellipse2 {
+  bottom: 0;
+  right: 0;
+}
+
+.ellipse3 {
+  bottom: 0;
+}
+
+.ellipse4 {
+  top: 0;
+  left: 0;
+}
+
+/* rings */
+.ring {
+  position: absolute;
+}
+
+.ring1 {
+  bottom: 30%;
+}
+
+.ring2 {
+  left: -5%;
+  top: 5%;
+}
+
+.ring3 {
+  left: 3%;
+  top: -10%;
+}
+
+.ring4 {
+  right: 20%;
+  top: -10%;
+}

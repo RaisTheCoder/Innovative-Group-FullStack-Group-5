@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(248, 183, 159);
+}
+
+input, label {
+    width: 80%;
+    padding: 3px;
+    margin: 5px;
+}
+
+input {
+    border: 1px black solid;
+    border-radius: 7px;   
+}
+
+form {
+    margin: 10%;
+    background-color: white;
+    border-radius: 12px;
+    height: 50%;
+    width: 25%;
+    padding: 20px;
+    border: black solid 2px;
+}
+
+#submit-button {
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 7px;
+    height: 45px;
+    width: 50%
+}

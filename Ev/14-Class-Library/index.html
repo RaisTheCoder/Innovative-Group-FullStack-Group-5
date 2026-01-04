@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Raiko</title>
+
+    <link rel="stylesheet" href="./assets/styles/page.css" />
+    <link rel="stylesheet" href="./assets/styles/home.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Raiko Framework -->
+    <link rel="stylesheet" href="./assets/raiko-framework/library.css" />
+    <link rel="stylesheet" href="./assets/raiko-framework/responsivity.css" />
+  </head>
+  <body>
+    <header
+      style="background-color: rgb(30, 39, 41); padding: 10px 100px"
+      class="header"
+    >
+      <a href="./index.html">
+        <img class="circle" src="./assets/images/AuclandLogo.png" alt="" />
+      </a>
+
+      <nav>
+        <ul id="nav-left">
+          <li>
+            <a class="text-bold text-white transition-1" href="./index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-bold text-white transition-1"
+              href="./templates/items.html"
+              >Items</a
+            >
+          </li>
+        </ul>
+
+        <form id="nav-src" action="">
+          <input
+            class="text-bold input-1 radius-1"
+            type="text"
+            placeholder="Search Items..."
+          />
+        </form>
+
+        <ul>
+          <li id="nav-right">
+            <a
+              target="_blank"
+              class="text-bold text-white transition-1"
+              href="./templates/about.html"
+              >About</a
+            >
+          </li>
+          <li class="text-white log-in">|</li>
+          <li><a class="text-bold text-white log-in" href="">Log In</a></li>
+          <li><a class="text-bold text-white log-in" href="">Sign Up</a></li>
+          <li class="text-white" id="nav-toggle">
+            |
+            <button class="text-white"><i class="fa-solid fa-bars"></i></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flexbox-column align-center wt-100">
+      <section class="main-sect"></section>
+
+      <section
+        id="menu-cards"
+        class="flexbox-row flexbox-wrap-1 wt-75 ht-100 align-center just-center gap-2"
+      >
+        <article
+          class="gap-1 text-white flexbox-column padding-3 radius-3 border-1 align-center just-center"
+          style="height: 450px; width: 320px; background-color: rgb(35, 42, 43)"
+        >
+          <div
+            class="wt-100 border-1 radius-2 hide-overflow"
+            style="height: 320px"
+          >
+            <img
+              class="wt-100 ht-100"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mobiledokan.com%2Fmedia%2Fapple-iphone-17-pro-max-white-official-image_1.webp&f=1&nofb=1&ipt=4918c5df13cc118d501b5b469949721b5cccdde18c7829bbd28731021ee3b273"
+              alt=""
+            />
+          </div>
+
+          <div class="flexbox-column align-start wt-100">
+            <p>1899 AZN</p>
+            <h3>iPhone 17 Pro - 512GB</h3>
+            <p>
+              Used, Good Condition -
+              <span style="color: gray" class="text-bold"
+                >Delivery 100 AZN</span
+              >
+            </p>
+          </div>
+
+          <div class="wt-100 flexbox-row gap-1 just-center margin-top-auto">
+            <button class="wt-50 button primary">Buy now</button>
+            <button class="wt-50 button primary">Add to Cart</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

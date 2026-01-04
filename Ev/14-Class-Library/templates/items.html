@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Raiko</title>
+
+    <link rel="stylesheet" href="../assets/styles/page.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Raiko Framework -->
+    <link rel="stylesheet" href="../assets/raiko-framework/library.css" />
+    <link rel="stylesheet" href="../assets/raiko-framework/responsivity.css" />
+  </head>
+  <body>
+    <header
+      style="background-color: rgb(30, 39, 41); padding: 10px 100px"
+      class="header"
+    >
+      <a href="../index.html">
+        <img class="circle" src="../assets/images/AuclandLogo.png" alt="" />
+      </a>
+
+      <nav>
+        <ul id="nav-left">
+          <li>
+            <a class="text-bold text-white transition-1" href="../index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="text-bold text-white transition-1" href="./items.html"
+              >Items</a
+            >
+          </li>
+        </ul>
+
+        <form id="nav-src" action="">
+          <input
+            class="text-bold input-1 radius-1"
+            type="text"
+            placeholder="Search Items..."
+          />
+        </form>
+
+        <ul>
+          <li id="nav-right">
+            <a
+              target="_blank"
+              class="text-bold text-white transition-1"
+              href="./templates/about.html"
+              >About</a
+            >
+          </li>
+          <li class="text-white log-in">|</li>
+          <li><a class="text-bold text-white log-in" href="">Log In</a></li>
+          <li><a class="text-bold text-white log-in" href="">Sign Up</a></li>
+          <li class="text-white" id="nav-toggle">
+            |
+            <button class="text-white"><i class="fa-solid fa-bars"></i></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

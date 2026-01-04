@@ -1,0 +1,25 @@
+@media (max-width: 900px) {
+    .header {
+        height: 50px;
+        justify-content: space-between;
+    }
+    .header img {
+        width: 30px;
+    }
+
+    .header nav {
+        width: fit-content;
+    }
+
+    #nav-left {
+        display: none;
+    }
+
+    #nav-src {
+        display: none;
+    }
+
+    #nav-toggle {
+        display: flex;
+    }
+}

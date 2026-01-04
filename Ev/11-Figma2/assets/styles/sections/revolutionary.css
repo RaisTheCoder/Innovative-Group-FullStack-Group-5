@@ -1,0 +1,12 @@
+.revolutionary {
+    background-image: none;
+    gap: 80px !important;
+    text-align: center;
+}
+
+.getstarted {
+    padding: 14px 24px;
+    border: none;
+    gap: 6px;
+    cursor: pointer;
+}

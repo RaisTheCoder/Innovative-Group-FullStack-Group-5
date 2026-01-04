@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libre - Daxil Ol</title>
+
+    <link rel="stylesheet" href="./assets/css/all.css" />
+
+    <link rel="stylesheet" href="./assets/styles/nav.css" />
+    <link rel="stylesheet" href="./assets/styles/login.css" />
+    <link rel="stylesheet" href="./assets/styles/page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="home.html" style="text-decoration: none; color: black"
+          ><h1>Libre</h1></a
+        >
+      </div>
+
+      <nav>
+        <ul>
+          <li class="nav-btn"><a href="home.html">Əsas Səhifə</a></li>
+          <li class="nav-btn"><a href="books.html">Kitablar</a></li>
+        </ul>
+
+        <ul class="nav-right">
+          <li class="nav-btn basket-btn">
+            <button>
+              <span class="basket-count">0</span>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </li>
+          <li class="nav-btn">
+            <a href="login.html">Daxil Ol</a>
+          </li>
+          <li class="nav-btn">
+            <a href="register.html">Qeydiyyatdan Keç</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="login">
+        <h1 class="card-title">Daxil Ol</h1>
+        <form>
+          <div class="field">
+            <label for="username">İstifadəçi Adı</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="İstifadəçi adınızı daxil edin"
+            />
+          </div>
+
+          <div class="field">
+            <label for="password">Şifrə</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Şifrənizi adınızı daxil edin"
+            />
+          </div>
+
+          <div id="login-btn">
+            <button>
+              <a href="home.html" id="hyper">Daxil Ol</a>
+            </button>
+
+            <div class="forgot-reg">
+              <a href="APİ var ki?">Şifrənizi Unutdunuz?</a>
+              <a href="register.html">Yeni Müştərisiniz?</a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

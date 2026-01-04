@@ -1,0 +1,31 @@
+.Statistics {
+  background-image: url("../../images/Ellipse.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #0f0f0f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 120px;
+  gap: 46px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.stats {
+  gap: 72px;
+}
+
+.stat h2 {
+  color: #9dff3a;
+}
+
+.stat .Subtitle {
+  color: #999999;
+}

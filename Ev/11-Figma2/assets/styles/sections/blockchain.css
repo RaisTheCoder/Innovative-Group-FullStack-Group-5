@@ -1,0 +1,54 @@
+#blockchain {
+  padding: 60px 120px;
+  gap: 80px;
+}
+
+.blockchain-content {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blockchain-column {
+  flex-direction: column;
+}
+
+.blockchain-card {
+  width: 622px;
+  border: 1px solid #999999;
+  border-radius: 20px;
+  padding: 30px 20px;
+  gap: 24px;
+  background-color: #0f0f0f;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.blockchain-icon {
+    flex-direction: row;
+  align-self: flex-start;
+}
+.blockchain-icon img {
+  width: 30px;
+}
+
+.blockch-card-body {
+    display: flex;
+    gap: 24px;
+}
+
+.blockch-details {
+  display: flex;
+  align-items: start;
+  text-align: start;
+  gap: 8px;
+}
+
+.blockch-text {
+  text-align: start;
+}
+
+.tx {
+    color: #999999;
+}

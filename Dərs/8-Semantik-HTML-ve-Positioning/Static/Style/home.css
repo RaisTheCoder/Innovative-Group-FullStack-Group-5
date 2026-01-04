@@ -1,0 +1,39 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 75px;
+}
+
+.first-sect {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.first-sect img {
+    width: 800px;
+}
+
+.side-bar {
+    color: white;
+    border-radius: 12px;
+    border: none;
+    padding: 25px;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(0, 128, 79);
+}
+
+.side-bar ul {
+    list-style: none;
+}
+
+.side-bar img {
+    width: 100%;
+    height: 200px;
+}

@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(13, 10, 37);
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: yellow
+}
+
+table {
+    border-radius: 10px;
+    background-color: rgb(190, 190, 190);
+}

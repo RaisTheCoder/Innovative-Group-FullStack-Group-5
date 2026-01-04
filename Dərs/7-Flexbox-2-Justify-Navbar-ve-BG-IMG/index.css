@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parents {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  background-color: gray;
+}
+
+.parent1 {
+  justify-content: start;
+}
+
+.parent2 {
+  align-items: center;
+  justify-content: center;
+}
+
+.parent3 {
+  align-items: end;
+  justify-content: end;
+}

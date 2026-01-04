@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cards {
+  width: 85%;
+  height: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* W3Schools my beloved <3 */
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  gap: 50px;
+}
+
+.card {
+  max-width: 320px;
+  max-height: 450px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 15px;
+  gap: 3px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+  animation: card-unhover 0.3s forwards;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.3s;
+}
+.card:hover {
+  animation: card-hover 0.3s forwards;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card:nth-child(odd)::before {
+  content: "Sale";
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: green;
+  position: absolute;
+  border-radius: 7px;
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+
+@keyframes card-hover {
+  from {
+    transform: translate(0px, 0px);
+  }
+
+  to {
+    transform: translate(0px, -5px);
+  }
+}
+@keyframes card-unhover {
+  from {
+    transform: translate(0px, -5px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+.image {
+  max-height: 350px;
+  height: 100%;
+  border-radius: 7px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
+.category {
+  color: gray;
+}
+
+.date {
+  color: rgb(76, 76, 76);
+  font-weight: 100;
+}
+
+.buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button {
+  width: 48%;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}

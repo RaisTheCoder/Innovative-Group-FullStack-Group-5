@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  color: white;
+}
+
+.Title1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110%;
+}
+
+.Title2 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.Title3 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+}
+
+.Subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  font-family: "Inter";
+}
+
+.Button {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.Text1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.Text2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.Caption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+}
