@@ -103,3 +103,13 @@ ekranın bərabəy kəsrinə görə boy almaq üçün əlverişlidir.
 2. "Do" ilə "While"-ın ən böyük fərqi:
     biri şərt uyğun olmasa belə kodu ən azı bir dəfə çalışdırır, 
     digəri isə kodu sırf uyğun şərt qarşılandıqda çalışdır. (Əksini edir)
+
+-- 05/01/2026 -- Array Introduction
+1. Array.slice() 2 indeks arasında, Array.splice() isə
+    bir indeksin qarşısından müxtəlif sayda sonsuz şəkildə silib yanından
+    yeni dəyərlər əlavə etmək üçün yararlıdır.
+
+-- 06/01/2026 -- Array-indexing -- Array Part 2
+1. Array.LastIndexOf bir massivdəki dəyəri 
+2. Array.join indeks dəyərlərimizi bir birindən ayırt etmək və stringə qoşmaq üçün istifadə edilir
+3. Array.sort(); alfabetik yaxud saya görə indekslərimizi sıralı şəkilə gətirir.
