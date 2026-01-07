@@ -23,7 +23,7 @@ while (isActive) {
     if (studentToRemove && studentToRemove.trim() !== "") {
       let index = students.indexOf(studentToRemove);
 
-      if (index !== -1) {
+      if (index !== -1 && index <! 0) {
         students.splice(index, 1);
         alert("Tələbə " + studentToRemove + " uğurla silindi.");
       } else {

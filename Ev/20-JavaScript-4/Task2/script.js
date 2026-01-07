@@ -20,9 +20,11 @@ function listSeats() {
 
 while (pickSeat) {
   if (seats.includes(choice)) {
+    let index = seats.indexOf(choice);
+
     seat = choice;
     console.log(`Oturacaq ${choice} uğurla rezerv edildi.`);
-    seats.splice(seats.indexOf(choice), 1);
+    seats.splice(index, 1);
     pickSeat = false;
   } else if (!seats.includes(choice)) {
     console.log(`Oturacaq ${choice} mövcud deyil.`);
