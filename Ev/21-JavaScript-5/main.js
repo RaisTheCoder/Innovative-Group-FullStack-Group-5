@@ -11,6 +11,6 @@ const telebeler = [
   "Tutu",
 ];
 
-let telebe = Math.round(Math.random(...telebeler) * telebeler.length);
-
-console.log(telebeler[telebe]);
+console.log(
+    telebeler.slice(randomIndex(telebeler), 3)
+)
