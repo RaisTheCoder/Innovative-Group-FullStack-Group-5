@@ -113,3 +113,29 @@ ekranın bərabəy kəsrinə görə boy almaq üçün əlverişlidir.
 1. Array.LastIndexOf bir massivdəki dəyəri 
 2. Array.join indeks dəyərlərimizi bir birindən ayırt etmək və stringə qoşmaq üçün istifadə edilir
 3. Array.sort(); alfabetik yaxud saya görə indekslərimizi sıralı şəkilə gətirir.
+
+-- 11/01/2026 -- Function Essentials
+1. Declared Function bir kod blokudur, daimi yazılıb təkrar-təkrar istifadə oluna bilər.
+   Declared Function hoistingə malikdir, bunun sayəsində
+   funksiyamızı yazmazdan əvvəl verəcəyimiz adı ilə çağırmaq mümkündür.
+
+   greet();
+   function greet() {
+    console.log("Hello World");
+   }
+
+2. Function Expression funksiyamızı bir dəyişən içində saxlayırıq.
+   Funksiyanın öz adı ola bilər, amma çox vaxt dəyişənin adından çağırırıq.
+   Hər yerdə gördüyümüz Declared Function kimi işləyir,
+   sadəcə hoisting yoxdur.
+3. Anonim Funksiyaların adları olmur. setTimeout və Array.map kimi yerlərdə daha çox istifadə edilir.
+   Arrow function da bir anonim funksiya tipidir.
+4. Callback Funksiyalar bir funksiya içindən digər çağırılan funksiyaya deyilir.
+5. Immediately Invoked Function Expression (IIFE)
+   təyin edildiyi kimi anında çalışan funksiya olaraq adlanır.
+   Encapsulation və initialization üçün daha çox istifadə olunur.
+6. Arrow Funksiyaları çox qısaldılmış, müasir lakin
+   ternary operatora bənzər halı ilə qəribə sintaksisi olan bir funksiya çeşididir.
+   Çox vaxt callback-lərdə istifadə olunur.
+   Yəqin ki Array.map və Array.filter də bunu istifadə etdiyinizin fərqində olmusuz.
+   Array.map((n) => n % 2 == 0);
