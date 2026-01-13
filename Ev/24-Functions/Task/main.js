@@ -8,8 +8,13 @@ function calculateFuel(distance, fuelPer100km, price) {
   let fuelUsed = (distance / 100) * fuelPer100km;
   let cost = fuelUsed * price;
 
-  console.log(`${distance} km məsafəyə görə benzin sərfiyyatı: ${fuelUsed} L`);
-  console.log(`${distance} km məsafəyə görə benzin xərci: ${cost} AZN`);
+  if (
+    !alert(
+      `${distance}km-ə görə benzin sərfiyyatı: ${fuelUsed.toFixed(2)}L\nMəsafəyə görə benzin xərci: ${cost.toFixed(2)}AZN`,
+    )
+  ) {
+    location.reload();
+  }
 }
 
 calculateFuel(distance, fuelPer100km, price);
