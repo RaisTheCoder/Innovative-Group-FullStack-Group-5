@@ -1,0 +1,16 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#image {
+  width: 300px;
+}
+
+button {
+  width: fit-content;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
