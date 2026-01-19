@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  height: 60px;
+  background-color: gray;
+  border-radius: 7px;
+  width: 800px;
+  padding: 6px;
+}
+
+.progress {
+  display: none;
+  background-color: green;
+  width: 0%;
+  height: 100%;
+  border-radius: 7px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  color: white;
+}
+
+.percentage {
+  display: none;
+}

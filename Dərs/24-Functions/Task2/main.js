@@ -13,6 +13,7 @@ function calculate(num1, num2) {
     return num1 * num2;
   } else if (operator == "4" || operator == "/") {
     if (num2 == 0) {
+      // NESTED CONDITION SPOTTED
       return "0'a bölmək is a big no-no. :P";
     } else {
       return num1 / num2;
@@ -22,8 +23,6 @@ function calculate(num1, num2) {
   }
 }
 
-if (!alert(
-  `Nəticə/Cavab\n${calculate(number1, number2)}`
-)) {
+if (!alert(`Nəticə/Cavab\n${calculate(number1, number2)}`)) {
   location.reload();
 }
