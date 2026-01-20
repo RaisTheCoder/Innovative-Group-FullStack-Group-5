@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+}
+
+input {
+  width: 140px;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(128, 128, 128, 0.351);
+  border-radius: 7px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#start-pause-stop {
+  cursor: pointer;
+  border-radius: 7px;
+  border: none;
+  height: 50px;
+  padding: 10px;
+  width: 100%;
+}
+
+#button-sub {
+  display: none;
+}
