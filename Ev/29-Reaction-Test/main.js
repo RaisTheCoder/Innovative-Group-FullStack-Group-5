@@ -1,5 +1,6 @@
 let text = document.querySelector(".announce");
 let container = document.querySelector("#container");
+
 let test = document.querySelector("#test");
 
 let recordDisplay = document.querySelector("#timeTaken");
@@ -9,17 +10,21 @@ let record = +localStorage.getItem("timeTaken");
   if (!record) {
     recordDisplay.innerText = `Your Fastest Record: Not Started Yet`;
   } else {
-    recordDisplay.innerText = `Your Fastest Record: ${localStorage.getItem("timeTaken")}ms`;
+    recordDisplay.innerText = `Your Fastest Record: ${record}ms`;
   }
 })();
 
 let button = document.querySelector("#start");
 
 let isRedScreen = false;
+let gameRunning = false;
 
 let timeTaken = 0;
 
 button.addEventListener("click", () => {
+  if (gameRunning) return;
+  gameRunning = true;
+
   recordDisplay.style.visibility = "hidden";
   container.style.backgroundColor = "rgb(72, 134, 215)";
   container.style.cursor = "pointer";
@@ -46,7 +51,7 @@ button.addEventListener("click", () => {
   // Red Screen <3
   let redTime = Date.now();
   let randomTime = (Math.floor(Math.random() * 10) + 1) * 1000;
-  setTimeout(() => {
+  let reactWhen = setTimeout(() => {
     isRedScreen = true;
     container.style.backgroundColor = "rgb(206, 71, 71)";
     text.innerText = "Click now!";
@@ -58,6 +63,7 @@ button.addEventListener("click", () => {
       "click",
       () => {
         if (isRedScreen) {
+          isRedScreen = false;
           let clickTime = Date.now();
           timeTaken = clickTime - redTime;
           container.style.backgroundColor = "rgb(89, 214, 89)";
@@ -67,7 +73,7 @@ button.addEventListener("click", () => {
           let oldRecord = +localStorage.getItem("timeTaken");
 
           // Initializing the record key in localStorage for the first time, otherwise it won't work. lol.
-          if (!oldRecord || oldRecord === null) {
+          if (!oldRecord || oldRecord == null) {
             localStorage.setItem("timeTaken", timeTaken);
             recordDisplay.innerText = `Your Fastest Record: ${localStorage.getItem("timeTaken")}ms`;
           } else {
@@ -75,12 +81,15 @@ button.addEventListener("click", () => {
             // (Least is the fastest)
             if (timeTaken < +localStorage.getItem("timeTaken")) {
               localStorage.setItem("timeTaken", timeTaken);
-              recordDisplay.innerText = `Your Fastest Record: ${localStorage.getItem("timeTaken")}ms (${oldRecord}ms before!)\nYou were ${oldRecord - timeTaken}ms faster this try!`;
+              recordDisplay.innerText = `Your Fastest Record: ${localStorage.getItem(
+                "timeTaken",
+              )}ms (${oldRecord}ms before!)\nYou were ${oldRecord - timeTaken}ms faster this try!`;
             } else {
               recordDisplay.innerText = `Your Fastest Record: ${localStorage.getItem("timeTaken")}ms`;
             }
           }
         } else {
+          recordDisplay.innerText = `Your Fastest Record: ${localStorage.getItem("timeTaken")}ms`;
           container.style.backgroundColor = "rgb(206, 71, 71)";
           text.innerText = "Too early!";
         }
@@ -90,9 +99,14 @@ button.addEventListener("click", () => {
         button.disabled = false;
         button.style.backgroundColor = "azure";
         button.style.border = "1px solid black";
+        // This needed to be here because
+        // you could easily click as fast as you can to exploit the new record
+        // You can just edit key values in the localStorage anyway.
+        clearTimeout(reactWhen); // Have to clean timeouts up, because it would still work even if you clicked early.
         clearInterval(loading);
+        gameRunning = false;
       },
       { once: true }, // Most useful thing ever!
     );
-  });
+  }, 1);
 });
