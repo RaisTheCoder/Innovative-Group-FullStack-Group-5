@@ -33,6 +33,7 @@ main {
   min-height: 600px;
   min-width: 500px;
   overflow: auto;
+  position: relative;
 }
 
 #movie-list {
@@ -90,4 +91,19 @@ main {
 
 #filter-form #reset {
   display: none;
+}
+
+#error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: azure;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 12px;
+  display: none;
+  pointer-events: none;
 }

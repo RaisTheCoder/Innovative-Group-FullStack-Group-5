@@ -1,4 +1,6 @@
 let currency = "AZN";
+let cooldown = 1.2;
+
 const movies = [
   {
     id: 0,
@@ -40,12 +42,8 @@ const filterSubmit = document.getElementById("filter-movies");
 const errPlaceholder = document.getElementById("error");
 const resetFilter = document.getElementById("reset");
 
-let minPrice = document.getElementById("minPrice").value;
-let maxPrice = document.getElementById("maxPrice").value;
-let _name = document.getElementById("name").value;
-let surName = document.getElementById("surname").value;
-
 let isFiltered = false;
+let timeOutTimer = cooldown * 1000;
 
 function listMovies(movies) {
   movieList.innerHTML = "";
@@ -61,6 +59,44 @@ function listMovies(movies) {
   });
 }
 
+function showError(message) {
+  filterSubmit.disabled = true;
+  filterSubmit.style.cursor = "not-allowed";
+  errPlaceholder.style.display = "block";
+  errPlaceholder.innerText = message;
+  setTimeout(() => {
+    filterSubmit.disabled = false;
+    filterSubmit.style.cursor = "pointer";
+    errPlaceholder.style.display = "none";
+    errPlaceholder.innerText = "";
+  }, timeOutTimer);
+}
+
+function filterMovies(minPrice, maxPrice, _name, surName, movies) {
+  const filteredMovies = [];
+  if (_name.trim() === "" || surName.trim() === "") {
+    showError("Please Enter Your Name or Your Surname");
+  } else if (+minPrice > +maxPrice) {
+    showError("Minimum Price Cannot Be Higher Than Maximum Price.");
+  } else {
+    isFiltered = true;
+    movieList.style.display = "flex";
+    filterForm.style.display = "none";
+
+    for (let i = 0; i < movies.length; i++) {
+      if (movies[i].price >= +minPrice && movies[i].price <= +maxPrice) {
+        filteredMovies.push(movies[i]);
+      }
+    }
+
+    if (filteredMovies.length === 0) {
+      showError("Couldn't Find Anything Matching This Criteria");
+    } else {
+      listMovies(filteredMovies);
+    }
+  }
+}
+
 filterBtn.addEventListener("click", () => {
   if (movieList.style.display === "none") {
     movieList.style.display = "flex";
@@ -73,44 +109,25 @@ filterBtn.addEventListener("click", () => {
 
     if (isFiltered) {
       resetFilter.style.display = "block";
-      resetFilter.addEventListener("click", () => {
-        isFiltered = false;
-        resetFilter.style.display = "none";
-        movieList.style.display = "flex";
-        filterForm.style.display = "none";
-        listMovies(movies);
-      });
     }
   }
 });
 
 filterSubmit.addEventListener("click", () => {
-  minPrice = document.getElementById("minPrice").value;
-  maxPrice = document.getElementById("maxPrice").value;
-  _name = document.getElementById("name").value;
-  surName = document.getElementById("surname").value;
+  let minPrice = document.getElementById("minPrice").value;
+  let maxPrice = document.getElementById("maxPrice").value;
+  let _name = document.getElementById("name").value;
+  let surName = document.getElementById("surname").value;
 
-  if (_name.trim() === "" || surName.trim() === "") {
-    errPlaceholder.innerText = "Please Enter Your Name or Your Surname";
-    setTimeout(() => {
-      errPlaceholder.innerText = "";
-    }, 1500);
-  } else if (+minPrice > +maxPrice) {
-    errPlaceholder.innerText =
-      "Minimum Price Cannot Be Higher Than Maximum Price.";
-    setTimeout(() => {
-      errPlaceholder.innerText = "";
-    }, 1500);
-  } else {
-    isFiltered = true;
-    movieList.style.display = "flex";
-    filterForm.style.display = "none";
-    const filteredMovies = movies.filter(
-      (m) => m.price >= minPrice && m.price <= maxPrice,
-    );
-    movieList.innerHTML = "";
-    listMovies(filteredMovies);
-  }
+  filterMovies(minPrice, maxPrice, _name, surName, movies);
+});
+
+resetFilter.addEventListener("click", () => {
+  isFiltered = false;
+  resetFilter.style.display = "none";
+  movieList.style.display = "flex";
+  filterForm.style.display = "none";
+  listMovies(movies);
 });
 
 listMovies(movies);
