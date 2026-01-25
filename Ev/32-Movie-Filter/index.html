@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Filter</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="movie-app">
+        <button id="filter-btn">Filter</button>
+        <ul id="movie-list">
+          <template id="movieTemplate">
+            <li class="movie">
+              <ul>
+                <li class="movie-name">Titanic</li>
+                <li class="mov-release-date">1997</li>
+                <li class="mov-imdb">7.9/10</li>
+                <li class="mov-price">25 AZN</li>
+              </ul>
+            </li>
+          </template>
+        </ul>
+        <div id="filter-form">
+          <!-- Form keeps reloading for god's sake. Might as well use div in this one. LOL -->
+          <label for="name">
+            <input placeholder="Name" type="text" id="name"/>
+          </label>
+          <label for="surname">
+            <input placeholder="Surname" type="text" id="surname"/>
+          </label>
+          <label for="minPrice">
+            <input placeholder="Minimum Price" value="0" min="0" type="number" id="minPrice" />
+          </label>
+          <label for="maxPrice">
+            <input placeholder="Maximum Price" value="0" min="0" type="number" id="maxPrice" />
+          </label>
+
+          <button id="filter-movies">Search</button>
+          <button id="reset">Reset</button>
+        </div>
+        <p id="error"></p>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
