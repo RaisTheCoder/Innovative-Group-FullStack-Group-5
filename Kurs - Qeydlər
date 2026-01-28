@@ -114,7 +114,7 @@ ekranın bərabəy kəsrinə görə boy almaq üçün əlverişlidir.
 2. Array.join indeks dəyərlərimizi bir birindən ayırt etmək və stringə qoşmaq üçün istifadə edilir
 3. Array.sort(); alfabetik yaxud saya görə indekslərimizi sıralı şəkilə gətirir.
 
--- 11/01/2026 -- Function Essentials
+-- 12/01/2026 -- Function Essentials
 1. Declared Function bir kod blokudur, daimi yazılıb təkrar-təkrar istifadə oluna bilər.
    Declared Function hoistingə malikdir, bunun sayəsində
    funksiyamızı yazmazdan əvvəl verəcəyimiz adı ilə çağırmaq mümkündür.
@@ -139,3 +139,19 @@ ekranın bərabəy kəsrinə görə boy almaq üçün əlverişlidir.
    Çox vaxt callback-lərdə istifadə olunur.
    Yəqin ki Array.map və Array.filter də bunu istifadə etdiyinizin fərqində olmusuz.
    Array.map((n) => n % 2 == 0);
+
+-- 13/01/2026 -- Object Classes/Arrays
+1. Obyekt içində bir çox dəyər saxlanılması mümkündür.
+2. Adətən array içərisində bir malın qiymətini, adını,
+   çəkisini və s. daxil etmək üçün istifadəyə əlverişlidir
+
+-- 14/01/2026 -- DOM Introduction
+1. DOM (Document Object Model), HTML faylımızdaki "class" və "id" elementlərini idarə etmək
+   və onlara dəyişən dəyərləri verəbilmək üçündür.
+
+-- 19/01/2026 --  
+
+-- 28/01/2026 -- LocalStorage and SessionStorage
+1. LocalStorage istifadəçinin lokal şəkildə brauzerinə məxsus data saxlanılması üçün istifadə edilir.
+   Databaza kimi nə qədər əsas olmasa belə burada Dark mode, yaxud oyunlarda yüksək toplanan bal kimi şeyləri saxlamaq daha əlberişlidir
+2. SessionStorage isə həmən səhifə bağlananadək dəyərlərin saxlanılması üçün istifadə edilir.
