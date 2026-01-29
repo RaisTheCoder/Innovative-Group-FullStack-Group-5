@@ -35,7 +35,7 @@ main {
   border-radius: 12px;
   height: 500px;
   display: grid;
-  grid-template-rows: 300px auto auto 1fr;
+  grid-template-rows: 300px 55px auto;
   gap: 5px;
   padding: 10px;
   overflow: hidden;
@@ -48,7 +48,6 @@ main {
 
 .image {
   width: 100%;
-  min-height: 300px;
   display: flex;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 7px;
@@ -65,7 +64,7 @@ main {
 }
 
 .name {
-    font-size: 16px;
+  font-size: 14px;
 }
 
 .info {
@@ -80,6 +79,7 @@ main {
   height: 100px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 7px;
+  flex: 1;
 }
 
 /* Search */
@@ -131,12 +131,10 @@ main {
   }
   .product {
     height: 350px;
+    grid-template-rows: 160px 55px 30px;
   }
   .name {
     font-size: 10px;
-  }
-  .image {
-    height: 160px;
   }
   .price {
     font-size: 10px;
