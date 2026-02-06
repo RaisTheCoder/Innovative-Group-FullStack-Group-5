@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDew - Your TODO list</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css"
+      integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="todo-app">
+      <h3>To-Do List</h3>
+      <div class="inputs">
+        <input
+          class="todo-input"
+          placeholder="Name todo here."
+          type="text"
+          id="todo-input"
+        />
+        <input type="datetime-local" id="todo-date" />
+        <button id="todo-add">Add</button>
+        <input
+          class="todo-input"
+          id="todo-search"
+          type="text"
+          placeholder="Search todo here."
+        />
+      </div>
+      Current
+      <ul id="todo-list" class="todo-list">
+        <template id="todoTemp">
+          <li class="todo">
+            <button class="todo-remove"><i class="fa-solid fa-x"></i></button>
+            <input type="checkbox" class="todo-complete" />
+            <p class="todo-title">Todo Demo</p>
+            -
+            <p class="todo-date">00/00/2000 - 12:00 AM</p>
+          </li>
+        </template>
+      </ul>
+      <p>Completed</p>
+      <ul id="completed-todo-list" class="todo-list"></ul>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

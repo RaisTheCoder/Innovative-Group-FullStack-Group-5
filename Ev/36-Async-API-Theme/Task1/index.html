@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css"
+      integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="light">
+    <button id="switch-theme"><i class="fa-solid fa-sun"></i></button>
+
+    <main>
+      <div id="container">
+        <input placeholder="Search products..." type="text" id="search" />
+        <section id="products">
+          <template id="prod-template">
+            <article class="product">
+              <img class="prod-thumbnail" src="" alt="" />
+
+              <strong class="prod-title">Product.</strong>
+              <p class="prod-price">3169 AZN</p>
+
+              <p class="prod-desc">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+                repellendus!
+              </p>
+            </article>
+          </template>
+        </section>
+        <section id="load-more">
+          <button id="load-btn">Load More</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

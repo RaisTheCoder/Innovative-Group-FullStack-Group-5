@@ -151,7 +151,16 @@ ekranın bərabəy kəsrinə görə boy almaq üçün əlverişlidir.
 
 -- 19/01/2026 --  
 
--- 28/01/2026 -- LocalStorage and SessionStorage
+-- 27/01/2026 -- LocalStorage and SessionStorage
 1. LocalStorage istifadəçinin lokal şəkildə brauzerinə məxsus data saxlanılması üçün istifadə edilir.
    Databaza kimi nə qədər əsas olmasa belə burada Dark mode, yaxud oyunlarda yüksək toplanan bal kimi şeyləri saxlamaq daha əlberişlidir
 2. SessionStorage isə həmən səhifə bağlananadək dəyərlərin saxlanılması üçün istifadə edilir.
+
+-- 28/01/2026 -- JSON and API
+1. API (Application Programing Interface/Aplikasiya Proqramlaşdırma İnterfeysi)
+   Proqramlarımızın və serverlərimizin bir-biri ilə müxtəlif yollarla əlaqə saxlayabilməsi
+   və data paylaşabilməsi üçün nəzərdə tutulmuşdur.
+   Restoranımızın ofisiantı kimi düşünəbilərik, sifarişimizi alıb databazaya çatdırır
+   Sifarişdə lazım olan inqridiyent yoxdursa ERROR 404 işə salınır.
+2. JSON formatı obyektlərimizi saxlayıb asanlıqla bir yerdə saxlamaq üçün istifadə edilir
+   İstənilən zaman "String"ə çeviriləbilir.
