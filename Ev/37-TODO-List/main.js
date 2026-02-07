@@ -19,12 +19,12 @@ function getNextId() {
 }
 
 function loadToDos() {
-  let SearchQuery = todoSrcInput.value;
+  let searchQuery = todoSrcInput.value;
   if (savedToDos != null) {
     todoList.innerHTML = "";
     completedTodoList.innerHTML = "";
 
-    if (SearchQuery) {
+    if (searchQuery) {
       let filteredTodos = savedToDos.filter((todo) =>
         todo.title.toLowerCase().includes(SearchQuery.toLowerCase()),
       );
@@ -46,15 +46,21 @@ function renderTodo(ToDoArray = []) {
     todoTitle.innerText = `${todo.title}`;
     let todoDate = clonedTodo.querySelector(".todo-date");
     todoDate.innerText = `${todo.date}`;
+    todoDate.innerText = todo.date.replace("T", " - ");
     let todoComplete = clonedTodo.querySelector(".todo-complete");
     let todoRemove = clonedTodo.querySelector(".todo-remove");
 
-    todoComplete.addEventListener("click", () => completeTodo(todo.id));
     todoRemove.addEventListener("click", () => removeTodo(todo.id));
 
+    todoComplete.checked = todo.completed;
+    todoComplete.addEventListener("change", () => {
+      todo.completed = todoComplete.checked;
+      localStorage.setItem("todoList", JSON.stringify(savedToDos));
+      loadToDos();
+    });
+
     if (todo.completed) {
-      todoComplete.disabled = true;
-      todoComplete.style.display = "none";
+      todoTitle.style.textDecoration = "line-through";
       completedTodoList.append(clonedTodo);
     } else {
       todoList.append(clonedTodo);
@@ -94,8 +100,8 @@ function completeTodo(id) {
 }
 
 function removeTodo(id) {
-  const todo = savedToDos.find((todo) => todo.id === id);
-  if (!todo) {
+  const todo = savedToDos.findIndex((todo) => todo.id === id);
+  if (todo === -1) {
     console.log("This is not a todo");
     return;
   }
